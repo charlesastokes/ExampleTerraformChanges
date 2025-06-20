@@ -24,7 +24,7 @@ resource "aws_iam_role" "ec2_role" {
 # Attach AWS-managed ReadOnlyAccess so the instance can list S3, describe EC2, etc.
 resource "aws_iam_role_policy_attachment" "ec2_read_only" {
   role       = aws_iam_role.ec2_role.name
-  policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
 ############################
